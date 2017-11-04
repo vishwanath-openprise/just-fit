@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~foundation-sites/dist/css/foundation-float.css';
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,600,700|Roboto+Condensed');
+body{
+  color: #4d4d4d;
+  font-family: 'Raleway', sans-serif;
+}
+
+.login-img {
+  background: url(assets/images/employees-1-blur.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+label{
+    line-height: initial;
+}
+.mat-input-placeholder{
+  color: #4d4d4d;
+}
+
+/****** for admin login input fiels ******/
+.admin-form .mat-input-placeholder{
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .admin-form .mat-input-underline{
+    border-bottom: 1px solid #cacaca;
+}
+
+
+/*************** for animation part **************/
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index: 100;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+.separator-div{
+    width: 10%;
+    height: 1px;
+    background: #C4C4C4;
+    margin: auto;
+}
+
+/*************** for animation part *end*************/
+
+/****** flex components ******/
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+  .align-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+/****** flex components *end*******/
+
+
+/******* For material design radio button ***********/          
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: #3f51b5;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color: #3f51b5;
+}
+       
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: blue;
+    opacity: 0.1
+}
+/******* For material design radio button *end**********/

@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h2>Test 1</h2>
+</div>
+<div class="separator-div"></div>
+<div class="large-12 small-12 medium-12 animated fadeInLeft" style="margin-top: 15px;">
+    <mat-card>
+        <h5> Question: {{questions.questionNumber}} </h5>
+        <mat-card-content>
+          <p>{{questions.question}}</p>
+
+          <mat-radio-group class="radio-group" [(ngModel)]="answer">
+              <mat-radio-button class="radio-button" *ngFor= "let choice of questions.choices" [value]="choice">
+                {{choice}}
+              </mat-radio-button>
+          </mat-radio-group>
+
+        </mat-card-content>
+        <div class="float-right">
+          <button mat-raised-button color="primary">Next</button>
+        </div>
+    </mat-card>
+</div>

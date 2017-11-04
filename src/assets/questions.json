@@ -1,0 +1,6 @@
+{
+        "id": 1,
+        "questionNumber": 1,
+        "question": "A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?",
+        "choices": ["120 metres", "180 metres", "324 metres", "150 metres"]
+}

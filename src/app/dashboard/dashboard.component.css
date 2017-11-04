@@ -1,0 +1,83 @@
+.mat-card{
+    padding: 0px !important;
+}
+.mat-card > div::after{
+    clear:both;
+    content:" ";
+    display:block;
+}
+
+.card-title{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.mat-card-content{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+}
+
+h2{
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 400;
+}
+
+.zoom-in:hover {
+    -webkit-animation-duration: 300ms;
+    animation-duration: 300ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    position: relative;
+    z-index: 1;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+         -webkit-transform: translateY(0);
+        transform: translateY(0);       
+
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        box-shadow: 5px 20px 20px 4px #F2F2F2;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+        box-shadow: 5px 20px 20px 4px #F2F2F2;
+    }
+}
+
+.top-bar-right ul li a{
+    color: #393939;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.active-status{
+    background-color: #20a8d8;
+}
+
+.disbale-status{
+    background-color: #f86c6b;
+}
+
+.progress-status{
+    background-color: #f8cb00;
+}
