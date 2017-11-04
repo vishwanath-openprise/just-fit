@@ -1,0 +1,16 @@
+# .gitignore for just-fit
+node_modules
+
+# web application files
+/web-app/WEB-INF
+
+# IDE support files
+/.classpath
+/.launch
+/.project
+/.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
+
