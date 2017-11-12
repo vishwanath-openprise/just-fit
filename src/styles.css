@@ -120,3 +120,17 @@ label{
     opacity: 0.1
 }
 /******* For material design radio button *end**********/
+
+.color-blue{
+    color: #3f51b5 !important;
+}
+
+.clear-both::after{
+    content: "";
+    clear: both;
+    display: table;    
+}
+
+.light-border{
+    border: 1px solid #c1c1c1 !important;
+}

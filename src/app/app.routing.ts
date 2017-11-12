@@ -19,7 +19,7 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent},
       { path: 'instructions/:id', component: InstructionsComponent},
-      { path: 'test', component: TestComponent}
+      { path: 'test/:id', component: TestComponent}
     ]
   },
   { path: 'administrators', component: AdminLoginComponent },

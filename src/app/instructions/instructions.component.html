@@ -3,14 +3,12 @@
 </div>
 <div class="separator-div"></div>
 <div class="large-12 small-12 medium-12 animated fadeInLeft" style="margin-top: 15px;">
-    <mat-card>
-        <div style="padding: 0.75rem 1.25rem;">
-          <mat-card-content>
-            <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.</p>
-          </mat-card-content>
-        </div>
+    <mat-card class="light-border">
+      <mat-card-content>
+        <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.</p>
+      </mat-card-content>
     </mat-card>
       <div class="flex-container align-center" style="margin-top: 25px;">
-          <button mat-raised-button color="primary" routerLink="/dashboard/test">START TEST</button>
+          <button mat-raised-button color="primary" [routerLink]="['/dashboard/test', userId]">START TEST</button>
       </div>
 </div>

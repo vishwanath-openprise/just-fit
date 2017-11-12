@@ -1,11 +1,6 @@
 .mat-card{
     padding: 0px !important;
 }
-.mat-card > div::after{
-    clear:both;
-    content:" ";
-    display:block;
-}
 
 .card-title{
     font-family: 'Raleway', sans-serif;

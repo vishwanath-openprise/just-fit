@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 //Modules required for material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatCardModule, MatRadioModule, MatTabsModule, MatSelectModule, MatFormFieldModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatCardModule, MatRadioModule, MatTabsModule, MatSelectModule, MatFormFieldModule, MatSnackBarModule} from '@angular/material';
 
 import { AppRoutingModule }     from './app.routing';
 import { AppComponent } from './app.component';
@@ -37,7 +37,7 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin_dashboard
     HttpModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatCardModule, MatRadioModule, MatTabsModule, MatSelectModule, MatFormFieldModule
+    MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatCardModule, MatRadioModule, MatTabsModule, MatSelectModule, MatFormFieldModule, MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

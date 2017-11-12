@@ -9,21 +9,21 @@ import { Hero } from './Hero';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  availableTests: Hero[] = [];
   constructor(private http: Http) {  }
 
   ngOnInit():void {
     this.getHeroes()
-      .then(heroes => this.heroes = heroes);
+      .then(heroes => this.availableTests = heroes);
   }
 
   getStatusClass(status):String{
     switch (status){
-      case 'active': 
+      case 'Active': 
         return 'active-status';
-      case 'disabled':
+      case 'Disabled':
         return 'disbale-status';
-      case 'progress':
+      case 'Progress':
         return 'progress-status';        
     }
   }

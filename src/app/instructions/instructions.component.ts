@@ -8,12 +8,12 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
   styleUrls: ['./instructions.component.css']
 })
 export class InstructionsComponent implements OnInit {
-
+  userId: number;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-        this.activatedRoute.params.subscribe((params: Params) => {
-        let userId = params['id'];        //contains the test id.
+      this.activatedRoute.params.subscribe((params: Params) => {
+        this.userId = params['id'];        //contains the test id.
       });
   }
 

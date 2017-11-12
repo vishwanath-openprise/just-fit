@@ -4,7 +4,7 @@
            <!-- <div class="logo"></div> -->
             <img src="../../assets/images/Openprise_Logo.png" class="op-logo">
             <mat-card>
-                <h2 style="text-align: center">Login in</h2>
+                <h2 style="text-align: center">Login</h2>
                 <form>
                     <mat-form-field>
                         <input matInput placeholder="Email" autofocus>
@@ -15,18 +15,10 @@
                         <i class="material-icons small-icons">lock</i>
                     </mat-form-field>
                     <button mat-raised-button routerLink="/dashboard"
-                        color="primary" style="width: 100%">Login in
+                        color="primary" style="width: 100%">Login
                     </button>
-                    <div class="menu-opt">
-                        <button md-button [matMenuTriggerFor]="menu" style="float: right;"><a>Options</a></button>
-                        <mat-menu #menu="matMenu">
-                            <button mat-menu-item>
-                                <span>Forgor passoword?</span>
-                            </button>
-                            <button mat-menu-item routerLink="/register">
-                                <span>Create account</span>
-                            </button>
-                        </mat-menu>
+                    <div class="clear-both">
+                        <button class="float-right color-blue" mat-button routerLink="/register">Create account</button>
                     </div>
                 </form>
             </mat-card>
