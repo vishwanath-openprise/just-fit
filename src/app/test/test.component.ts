@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
-import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
 import {MatSnackBar} from '@angular/material';
 import { Questions } from './Questions';
 
@@ -12,31 +12,53 @@ import { Questions } from './Questions';
 })
 export class TestComponent implements OnInit {
   
-  questions: Questions[] = [];
+  questions: Questions;
   answer: string;
 
   private _testEndsAt;
-  private _countDown;
+  public _countDown;
 
   constructor(private http: Http, public snackBar: MatSnackBar) { }
 
   ngOnInit():void {
-    this.getQuestion()
-      .then(questions => this.questions = questions);
+    // need to import (import 'rxjs/add/operator/toPromise';)
+    // this.getQuestion()
+    //   .then(questions => this.questions = questions);
 
-      this._testEndsAt = 1;
-      var seconds = 60;
-      var minutes = this._testEndsAt;
-      const timer = Observable.interval(1000).map((x) => {
-      }).subscribe((x) => {
-          seconds = this.checkSecond(seconds - 1);
-          if(seconds == 59) {minutes = minutes-1};
-          if(minutes == 0 && seconds == 0) {
-            timer.unsubscribe();
-            this.openSnackBar();
-          };
-          this._countDown = minutes + " Min : " + seconds + " Sec";
-      });   
+    //   this._testEndsAt = 1;
+    //   var seconds = 60;
+    //   var minutes = this._testEndsAt;
+    //   const timer = Observable.interval(1000).map((x) => {
+    //   }).subscribe((x) => {
+    //       seconds = this.checkSecond(seconds - 1);
+    //       if(seconds == 59) {minutes = minutes-1};
+    //       if(minutes == 0 && seconds == 0) {
+    //         timer.unsubscribe();
+    //         this.openSnackBar();
+    //       };
+    //       this._countDown = minutes + " Min : " + seconds + " Sec";
+    //   });   
+    this.getQuestion().subscribe(
+      data => {
+        this.questions = data;
+
+        // to display count down timer
+        this._testEndsAt = 1;
+        var seconds = 60;
+        var minutes = this._testEndsAt;
+        const timer = Observable.interval(1000).map((x) => {
+        }).subscribe((x) => {
+            seconds = this.checkSecond(seconds - 1);
+            if(seconds == 59) {minutes = minutes-1};
+            if(minutes == 0 && seconds == 0) {
+              timer.unsubscribe();
+              this.openSnackBar();
+            };
+            this._countDown = minutes + " Min : " + seconds + " Sec";
+        });  
+        // console.log(this.questions);
+      }
+    );
   }
 
   openSnackBar() {
@@ -51,9 +73,17 @@ export class TestComponent implements OnInit {
     return sec;
   }
 
-  getQuestion(): Promise<Questions[]> {
-    return this.http.get('../../assets/questions.json')
-           .toPromise()
-           .then(response => response.json()) ;
-  }
+  // getQuestion(): Promise<Questions[]> {
+  //   return this.http.get('./assets/questions.json')
+  //          .toPromise()
+  //          .then(response => response.json()) ;
+  // }
+
+  getQuestion() {
+    return this.http.get('./assets/questions.json')
+        .map(data => {
+            data.json();
+            return data.json();
+    });
+}
 }

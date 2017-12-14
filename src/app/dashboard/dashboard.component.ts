@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getHeroes(): Promise<Hero[]> {
-        return this.http.get(`../../assets/tests.json`)
+        return this.http.get(`./assets/tests.json`)
                .toPromise()
                .then(response => response.json() as Hero[]);
   }
